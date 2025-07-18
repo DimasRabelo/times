@@ -11,65 +11,76 @@
 
   <style>
 
-    .Carrossel {
-      position: relative;
-      max-width: 90%;
-      margin: 50px auto 80px;
-      overflow: visible;
-    }
+  /* 🔲 Container principal do carrossel */
+.Carrossel {
+  position: relative;           /* Permite posicionar elementos internos com base nesse contêiner */
+  max-width: 90%;              /* Limita a largura a 90% da tela */
+  margin: 50px auto 80px;      /* Espaço em cima (50px), embaixo (80px) e centralizado horizontalmente */
+  overflow: visible;          /* Permite que elementos que ultrapassem o contêiner fiquem visíveis (como efeitos de zoom) */
+}
 
-    .Carrossel .slick-slide {
-      padding: 0 10px;
-    }
+/* 📦 Espaçamento entre os slides */
+.Carrossel .slick-slide {
+  padding: 0 10px;             /* Adiciona espaço lateral entre os slides */
+}
 
-    .Carrossel img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-      background: #111;
-    }
+/* 🖼️ Estilo das imagens dos slides */
+.Carrossel img {
+  width: 100%;                 /* Imagem ocupa 100% da largura do slide */
+  height: auto;               /* Mantém proporção automática */
+  display: block;             /* Elimina espaçamento extra causado por imagens inline */
+  border-radius: 10px;        /* Arredonda os cantos das imagens */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra suave ao redor da imagem */
+  background: #111;           /* Cor de fundo escura para imagens com transparência */
+}
 
-    .Carrossel .slick-prev,
-    .Carrossel .slick-next {
-      z-index: 2;
-      top: 45%;
-      transform: translateY(-50%);
-    }
+/* ⏪⏩ Setas de navegação — posicionamento vertical */
+.Carrossel .slick-prev,
+.Carrossel .slick-next {
+  z-index: 2;                  /* Garante que fiquem acima das imagens */
+  top: 45%;                    /* Posiciona verticalmente ao meio */
+  transform: translateY(-50%);/* Corrige o alinhamento vertical ao centro */
+}
 
-    .Carrossel .slick-prev {
-      left: -50px;
-    }
+/* ⬅️ Posição da seta anterior */
+.Carrossel .slick-prev {
+  left: -50px;                 /* Move a seta para a esquerda, fora do contêiner */
+}
 
-    .Carrossel .slick-next {
-      right: -50px;
-    }
+/* ➡️ Posição da seta próxima */
+.Carrossel .slick-next {
+  right: -50px;                /* Move a seta para a direita, fora do contêiner */
+}
 
-    .Carrossel .slick-prev:before,
-    .Carrossel .slick-next:before {
-      font-size: 40px;
-      color: #1e0ff1;
-    }
+/* 🎯 Estilo visual das setas */
+.Carrossel .slick-prev:before,
+.Carrossel .slick-next:before {
+  font-size: 40px;             /* Tamanho grande das setas */
+  color: #1e0ff1;              /* Azul vibrante para destaque */
+}
 
-    .Carrossel .slick-dots {
-      bottom: -35px;
-    }
+/* ⚪⚫ Área dos pontinhos indicadores abaixo do carrossel */
+.Carrossel .slick-dots {
+  bottom: -35px;               /* Move os pontinhos para baixo do carrossel */
+}
 
-    .Carrossel .slick-dots li {
-      margin: 0 10px;
-    }
+/* 📏 Espaçamento entre os pontinhos */
+.Carrossel .slick-dots li {
+  margin: 0 10px;              /* Adiciona espaço horizontal entre cada pontinho */
+}
 
-    .Carrossel .slick-dots li button:before {
-      font-size: 20px;
-      color: #1e0ff1;
-    }
+/* 🎨 Estilo dos botões dos pontinhos */
+.Carrossel .slick-dots li button:before {
+  font-size: 20px;             /* Tamanho dos indicadores */
+  color: #1e0ff1;              /* Cor padrão azul vibrante */
+}
 
-    .Carrossel .slick-dots li.slick-active button:before {
-      opacity: .75;
-      color: #5b48c9;
-    }
- 
+/* 🌟 Estilo especial para o pontinho ativo (slide atual) */
+.Carrossel .slick-dots li.slick-active button:before {
+  opacity: .75;                /* Leve transparência para efeito sutil */
+  color: #5b48c9;              /* Cor roxa para diferenciar o slide atual */
+}
+
   </style>
 </head>
 <body>
