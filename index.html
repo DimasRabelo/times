@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrossel</title>
+
+  <!-- Estilos do Slick Carousel -->
+  <link rel="stylesheet" href="slick.css">
+  <link rel="stylesheet" href="slick-theme.css">
+
+  <style>
+
+    .Carrossel {
+      position: relative;
+      max-width: 90%;
+      margin: 50px auto 80px;
+      overflow: visible;
+    }
+
+    .Carrossel .slick-slide {
+      padding: 0 10px;
+    }
+
+    .Carrossel img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      background: #111;
+    }
+
+    .Carrossel .slick-prev,
+    .Carrossel .slick-next {
+      z-index: 2;
+      top: 45%;
+      transform: translateY(-50%);
+    }
+
+    .Carrossel .slick-prev {
+      left: -50px;
+    }
+
+    .Carrossel .slick-next {
+      right: -50px;
+    }
+
+    .Carrossel .slick-prev:before,
+    .Carrossel .slick-next:before {
+      font-size: 40px;
+      color: #1e0ff1;
+    }
+
+    .Carrossel .slick-dots {
+      bottom: -35px;
+    }
+
+    .Carrossel .slick-dots li {
+      margin: 0 10px;
+    }
+
+    .Carrossel .slick-dots li button:before {
+      font-size: 20px;
+      color: #1e0ff1;
+    }
+
+    .Carrossel .slick-dots li.slick-active button:before {
+      opacity: .75;
+      color: #5b48c9;
+    }
+ 
+  </style>
+</head>
+<body>
+
+  <section class="Carrossel">
+    <img src="img/botafogo.png" alt="Botafogo">
+    <img src="img/corinthians.png" alt="Corinthians">
+    <img src="img/Flamengo.png" alt="Flamengo">
+    <img src="img/Fluminense.png" alt="Fluminense">
+    <img src="img/Palmeiras.png" alt="Palmeiras">
+    <img src="img/santos.png" alt="Santos">
+    <img src="img/Sao-Paulo.png" alt="São Paulo">
+    <img src="img/Vasco.png" alt="Vasco">
+  </section>
+
+  <!-- jQuery e Slick Carousel -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="slick.min.js"></script>
+
+  <script>
+$('.Carrossel').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});
+</script>
